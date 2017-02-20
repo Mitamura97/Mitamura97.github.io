@@ -22,7 +22,7 @@
 
   .centerBox {display:block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 50%; min-width: 180px; height:50%; text-align: center; }
   .centerBox *{ display: block; margin: auto; position: relative;}
-  .section1 {   height: 100vh; width: 100vw;  background: url(image/tune-top.jpg) no-repeat fixed; background-size: 100% 100%; background-position: 50% 50%;}
+  .section1 {   height: 100vh; width: 100vw;  background: url(image/tune-top.jpg) no-repeat fixed; background-size: cover; background-position: center center;}
   .section2 {  height: 100vh; width: 100vw;  background: #fff; color: #009688; }
   .section3 {  height: 150vh; width: 100vw;  background: url(image/tune1.jpg) no-repeat fixed bottom center; background-size: cover; background-position: 50% 50%;}
   .section4 {  height: 100vh; width: 100vw;  background: #009688; }
