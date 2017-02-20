@@ -1,0 +1,9 @@
+div{
+  margin: none;
+}
+
+.cover img{
+  margin: none;
+  width: 100%;
+  height:auto;
+}
