@@ -4,7 +4,6 @@ body,html{
   padding: 0;
   background-color: black;
   color: white;
-
 }
 body {
   position:relative;
@@ -159,8 +158,10 @@ footer{
   text-align: center;
   background-color: black;
   color: white;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 92vw;
 }
-
 
 
 /*bg-boxで画像の文の幅、高さを確保する*/
@@ -169,6 +170,7 @@ footer{
   height:700px;
   position: relative;
   color: #fff;
+  margin: 0;
 }
 
 /*pc以外の背景*/
@@ -176,18 +178,21 @@ footer{
   width: 100%;
   height: inherit;
   z-index: -2;
+  margin: 0;
 }
 
 /*中の文字の場所についてのレイアウト*/
 .contents{
-  display: block;
-  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  padding-top: 25%;
+  padding-top: 300px;
   text-align: center;
+
+}
+.top{
+  padding-top: 150px;
 }
 
 
@@ -202,7 +207,8 @@ footer{
 .scroll-contents{
   display: block;
   text-align: center;
-  padding: 45% 0;
+  padding: 300px 0;
+  margin: 0;
 }
 .bg-color1{
   background-color: #fff;
