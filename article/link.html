@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>Tune | TOP PAGE</title>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/menu.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <header>
+    <nav id="menu-wrap">
+      <div id="navToggle">
+        <div>
+          <span></span> <span></span> <span></span>
+        </div>
+      </div>
+      <ul id="menu">
+        <li><a href="../index.html">TOP</a></li>
+        <li><a href="../article/about.html">ABOUT</a></li>
+        <li><a href="../article/story.html">STORY</a></li>
+        <li><a href="../article/member.html">MEMBER</a></li>
+        <li><a href="../article/link.html">LINK</a></li>
+        <li><a href="../article/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <div class="cd-fixed-bg cd-bg-1 bg-box">
+      <img src ="../img/tune-top.jpg" class="img-bg"/>
+      <div class="contents">
+          <h1>nana</h1>
+          <p style="padding: 10px;">
+            <a href="http://nana-music.com/users/2628162/"
+             class="btn sample15">nanaを<br>聴きに行く</a>
+           </p>
+      </div>
+    </div>
+
+    <div class="scroll bg-color1">
+      <div class="scroll-contents">
+                  <h1>twitter</h1>
+        <p style="padding: 10px;">
+          <a href="https://twitter.com/project_tune"
+           class="btn2 sample16">twitterを<br>見に行く</a>
+         </p>
+
+      </div>
+    </div>
+  <footer class="">
+    このサイトに掲載されている全データを複製、転載することを禁じます。<br>
+    ©2016 Tune
+  </footer>
+
+
+  <script>
+  var menuHeight = $("#menu-wrap").height();
+  var startPos = 0;
+  $(window).scroll(function(){
+    var currentPos = $(this).scrollTop();
+    if (currentPos > startPos) {
+      if($(window).scrollTop() >= 200) {
+        $("#menu-wrap").css("top", "-" + menuHeight + "px");
+      }
+    } else {
+      $("#menu-wrap").css("top", 0 + "px");
+    }
+    startPos = currentPos;
+  });
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-775394-6', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+    $('#navToggle').click(function(){//headerに .openNav を付加・削除
+      $('header').toggleClass('openNav');
+      $('header').toggleClass('closeNav');
+    });
+  });
+  </script>
+
+</body>
+</html>
