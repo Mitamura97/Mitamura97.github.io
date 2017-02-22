@@ -110,9 +110,9 @@ h2 {
 /*header menu*/
 /*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
 .openNav nav {
-  -moz-transform: translateY(351px);
-  -webkit-transform: translateY(351px);
-  transform: translateY(351px)
+  -moz-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
 }
 header{
   height:60px;
