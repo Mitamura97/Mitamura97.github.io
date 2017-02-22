@@ -255,6 +255,9 @@ footer{
     margin : 0 0 1.8em 0;
     line-height : 1;
   }
+  footer{
+    font-size: 95%;
+  }
   #navToggle {
     display:block;
     z-index: 10000;
