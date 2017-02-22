@@ -190,19 +190,19 @@ footer{
   text-align: center;
 }
 
-.scroll-contents{
-  display: block;
-  text-align: center;
-  padding: 40% 30%;
-}
 
 /*スクロールすると覆いかぶさるやつ
 (スマホ版は覆いかぶさらずにみんな一緒に動く)*/
 .scroll{
   margin: 0;
-  height:100vh;
+  height:80vh;
   width:100vw;
   z-index: 2;
+}
+.scroll-contents{
+  display: block;
+  text-align: center;
+  padding: 50% 30%;
 }
 .bg-color1{
   background-color: #fff;
