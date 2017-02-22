@@ -27,13 +27,25 @@ height:100vw;
 
 .cd-fixed-bg::before{
   position: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*background-attachment: fixed;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 0;
+  content: "";
+  z-index: -1;
 }
 
 .cd-fixed-bg {
-  z-index: -1;
     height: 100vh;
-    width: 100%;
-    min-height: 100%;
 }
 
 .cd-fixed-bg.cd-bg-1 {
