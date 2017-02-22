@@ -12,6 +12,12 @@ p{
   margin: 20px;
   padding: 10px;
 }
+li{
+  padding: 5px;
+}
+ul{
+  list-style:none;
+}
 body {
   position:relative;
   margin: 0;
@@ -132,7 +138,7 @@ a.btn{
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
-  text-align: center;
+  text-agn: center;
   text-decoration: none;
   line-height: 1;
 }
