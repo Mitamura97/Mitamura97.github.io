@@ -174,7 +174,7 @@ footer{
 /*pc以外の背景*/
 .img-bg{
   width: 100%;
-  height: 100%;
+  height: 80vh;
   z-index: -2;
 }
 
