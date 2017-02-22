@@ -2,46 +2,218 @@ body,html{
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: white;
 
 }
+body {
+  position:relative;
+  margin: 0;
+  padding: 0;
+  font: 12px/100% 'Acme', sans-serif;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka,
+  "ƒƒCƒŠƒI", Meiryo, "‚l‚r ‚oƒSƒVƒbƒN", "MS PGothic", sans-serif;
+}
 
+h1,h2 {
+  line-height: 1;
+  margin: 0 0 120px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: -2px;
+}
+h1{
+  font-size: 580%;
+}
+h2 {
+  font-size: 380%;
+}
+
+/*menu関係*/
+#menu-wrap {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,1);
+  font-family: 'Open Sans', sans-serif;
+  transition: .3s;
+}
+#menu { list-style-type: none;
+  width: 960px;
+  margin: 0px auto 0px;
+  padding: 0;
+}
+#menu li {
+  width: 16%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#menu li a {
+  display: block;
+  width : 100%;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+  transition: .3s;
+}
+#menu li a:hover {
+  background: rgba(0,200,0,.3);
+}
+
+/*nav関係*/
+#navToggle {
+  display:none;
+  position:absolute;
+  right:13px;
+  top:13px;
+  width:30px;
+  height:25px;
+  cursor:pointer
+}
+#navToggle div {
+  position:relative
+}
+#navToggle span {
+  display:block;
+  position:absolute; /*#navToggle div に対して*/
+  width:100%;
+  border-bottom:solid 3px #999;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out
+}
+#navToggle span:nth-child(1) {top:0}
+#navToggle span:nth-child(2) {top:11px}
+#navToggle span:nth-child(3) {top:22px}
+
+/* Toggle(Button) */
+.openNav #navToggle span:nth-child(1) {
+  top: 11px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  transform:rotate(-45deg)
+}
+.openNav #navToggle span:nth-child(2),
+.openNav #navToggle span:nth-child(3) {
+  top: 11px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  transform:rotate(45deg)
+}
+
+
+/*header menu*/
+/*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
+.openNav nav {
+  -moz-transform: translateY(351px);
+  -webkit-transform: translateY(351px);
+  transform: translateY(351px)
+}
+header{
+  height:60px;
+}
+
+a.btn{
+  display: inline-block;
+  width: 180px;
+  margin: 10px 0;
+  padding: 16px 20px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+}
+a.sample15 {
+  position:relative;
+  z-index:2;
+  overflow:hidden
+}
+a.sample15::after {
+  display:block;
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:50%;
+  left:50%;
+  width:160px;
+  height:160px;
+  margin:-80px 0 0 -80px;
+  border:80px double rgba(255,255,255,0);
+  border-radius:50%
+}
+a.sample15:hover::after {
+  border-width:0;
+  border-color:rgba(255,255,255,1);
+  transition:.5s
+}
+
+footer{
+  padding: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+
+
+/*bg-boxで画像の文の幅、高さを確保する*/
+.bg-box{
+  width:100vw;
+  height:100vw;
+  position: relative;
+  color: #fff;
+}
+
+/*pc以外の背景*/
 .img-bg{
   width: 100%;
   height: 100%;
   z-index: -2;
 }
 
-
-/*bg-boxで画像の文の幅、高さを確保する*/
-.bg-box{
-width:100vw;
-height:100vw;
-position: relative;
-}
-
+/*中の文字の場所についてのレイアウト*/
 .contents{
+  display: block;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  top: 50%;
-  right: 50%;
+  top: 0;
+  right: 0;
+  padding-top: 25%;
+  text-align: center;
 }
 
+.scroll-contents{
+  display: block;
+  text-align: center;
+  padding: 40% 30%;
+}
+
+/*スクロールすると覆いかぶさるやつ
+(スマホ版は覆いかぶさらずにみんな一緒に動く)*/
 .scroll{
   margin: 0;
   height:100vh;
   width:100vw;
-  background-color: rgba(200,0,0,.2);
   z-index: 2;
 }
-.cd-fixed-bg {
-    height: 100vh;
+.bg-color1{
+  background-color: #fff;
+  color: #009688;
+}
+.bg-color2{
+  background-color: #009688;
 }
 
-
-.cd-scrolling-bg {
-    min-height: 100%;
-}
-
-@media screen and (min-width: 980px) {
+/*PC用の記述*/
+@media screen and (min-width: 940px) {
   .cd-fixed-bg{
     background-attachment: fixed;
     background-size: cover;
@@ -55,13 +227,67 @@ position: relative;
     background-image: url("../img/tune1.jpg");
   }
   .cd-fixed-bg.cd-bg-3 {
-    background-image: url("../img/tune-top.jpg");
+    background-image: url("../img/tune2.jpg");
   }
   .cd-fixed-bg.cd-bg-4 {
     background-image: url("../img/tune1.jpg");
   }
-.img-bg{
-  display: none;
+  .img-bg{
+    display: none;
+  }
 }
+
+@media screen and (max-width:940px) {
+  h2
+  {
+    font-size : 105% ;
+    margin : 1em 0 0.8em 0 ;
+  }
+  p {
+    width:auto;
+    font-size : 95%;
+    margin : 0 0 1.8em 0;
+    line-height : 1;
+  }
+  #navToggle {
+    display:block;
+    z-index: 10000;
+  }
+  #menu{
+    position: absolute;
+    right: 0;
+  }
+  #menu-wrap{
+    position: fixed;
+  }
+  #menu{
+    z-index: inherit;
+    display: none;
+    width:260px;
+    height:360px;
+    transform: translateX(200px);
+    background-color: rgba(0,0,0,0.3);
+  }
+  #menu li{
+    z-index:inherit;
+    clear: left;
+    margin:0 auto;
+    width: inherit;
+  }
+  #menu.active{
+    display:block;
+    animation: slide .3s ease 0s 1 both;
+  }
+  @keyframes slide{
+    0%{
+      display: none;
+    }
+    1%{
+      display: block;
+    }
+    100%{
+      transform: translateX(0px);
+    }
+  }
 
 }

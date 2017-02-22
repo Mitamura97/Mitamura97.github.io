@@ -5,40 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
   <title>sample</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="menu.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/style.css">
-<body>
-  <main>
-    <div class="cd-fixed-bg cd-bg-1 bg-box">
-      <img src ="./img/tune-top.jpg" class="img-bg"/>
-      <div class="contents">
-          <h1>見出し</h1>
-      </div>
-    </div>
 
-    <div class="cd-scrolling-bg scroll">
-        <div class="cd-container">
-            <p>
-                コンテンツ
-            </p>
+  <header>
+    <nav id="menu-wrap">
+      <div id="navToggle">
+        <div>
+          <span></span> <span></span> <span></span>
         </div>
-    </div>
-
-    <div class="cd-fixed-bg cd-bg-2 bg-box">
-      <img src="./img/tune1.jpg" class="img-bg" />
-      <div class="contents">
-          <h1>見出し</h1>
       </div>
-    </div>
+      <ul id="menu">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="story.html">STORY</a></li>
+          <li><a href="member.html">MEMBER</a></li>
+          <li><a href="link.html">LINK</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="cd-scrolling-bg scroll">
-        <div class="cd-container">
-            <p>
-                コンテンツ
-            </p>
+
+
+  <body>
+    <main>
+      <div class="cd-fixed-bg cd-bg-1 bg-box">
+        <img src ="./img/tune-top.jpg" class="img-bg"/>
+        <div class="contents">
+          <h1>Tune</h1>
+        <p>nanaから始まる声劇プロジェクトです</p>
+        <p style="padding: 10px;"><a href="http://nana-music.com/users/2628162/" class="btn sample15">nanaを<br>聴きに行く</a></p>
+        <p>Prease▼scroll</p>
         </div>
-    </div>
-</main>
-</body>
+      </div>
+
+      <div class="scroll bg-color1">
+        <div class="scroll-contents">
+          <p>この世界は変わってしまった――あろうことか勝利の下で<br />"英雄 薔薇織四季"</p>
+        </div>
+      </div>
+
+      <div class="cd-fixed-bg cd-bg-2 bg-box">
+        <img src="./img/tune1.jpg" class="img-bg" />
+        <div class="contents">
+          <h1>見出し</h1>
+        </div>
+      </div>
+
+      <div class="scroll bg-color2">
+        <div class="scroll-contents">
+          <p>
+            コンテンツ
+          </p>
+        </div>
+      </div>
+      <div class="cd-fixed-bg cd-bg-3 bg-box">
+      </div>
+    </main>
+  </body>
 
 
-</html>
+  </html>
