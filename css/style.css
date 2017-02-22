@@ -161,6 +161,7 @@ footer{
   margin-bottom: 0;
   bottom: 0;
   width: 92vw;
+  font-size: 80%;
 }
 
 
@@ -255,9 +256,7 @@ footer{
     margin : 0 0 1.8em 0;
     line-height : 1;
   }
-  footer{
-    font-size: 80%;
-  }
+
   #navToggle {
     display:block;
     z-index: 10000;
