@@ -16,6 +16,13 @@ body,html{
 .bg-box{
 width:100vw;
 height:100vw;
+position: relative;
+}
+
+.contents{
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }
 
 .scroll{
